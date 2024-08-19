@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-
 module vga_cntl(
     clk_50MHz,  //|<i
     rst,        //|<i
