@@ -1,6 +1,5 @@
 `timescale 1ns /1ps
 
-
 module clock_gen_tb;
 
 reg clk;
