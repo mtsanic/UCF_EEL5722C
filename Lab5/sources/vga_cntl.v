@@ -56,57 +56,6 @@ module vga_cntl(
         end
     end
 
-    
-//    always @(posedge clk_50MHz or posedge rst) begin
-//        if (rst) begin
-//            col_pix=0;
-//            row_pix=0;
-//        end
-//        else begin
-//            if(row_pix==(h_pixel-1) && col_pix==(v_pixel-1)) begin
-//                    col_pix=0;
-//                    row_pix=0;
-//            end
-//            else if(row_pix==(h_pixel-1) && col_pix!=(v_pixel-1)) begin
-//                    col_pix=col_pix+1;
-//                    row_pix=0;
-//            end
-//            else begin
-//                row_pix=row_pix+1;
-//            end
-//        end
-//    end
-
-
-//    always @(posedge clk_50MHz or posedge rst) begin
-//        if (rst) begin
-//            row_pix<=0;
-//        end
-//        else begin
-//            if(row_pix==(h_pixel-1)) begin
-//                row_pix=0;
-//            end
-//            else begin
-//                row_pix=row_pix+1;
-//            end
-//        end
-//    end
-
-//    always @(posedge clk_50MHz or posedge rst) begin
-//        if (rst) begin
-//            col_pix<=0;
-//        end
-//        else begin
-//            if(row_pix==(h_pixel-1)) begin
-//                if (row_pix==(v_pixel-1)) begin
-//                   col_pix=0; 
-//                end  
-//            end
-//            else begin
-//                col_pix=col_pix+1;
-//            end
-//        end
-//    end
 
     assign Hsync=(row_pix< h_pulse)? 0:1;
     assign Vsync =(col_pix < v_pulse)? 0:1;
